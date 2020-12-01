@@ -1,17 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addUser } from '../../core/redux/actions/user';
+import './styles.css';
 
 class Home extends React.Component {
     render() {
-        console.log(process.env.REACT_APP_DOMAIN); 
         return (
-            <>
-                Home {process.env.DOMAIN}<br />
-                <button onClick={() => this.props.onAddUserClicked()}>Add User</button>
-                <br />
-                {JSON.stringify(this.props.users)}
-            </>
+            <div className="container">
+                <img src="https://skyplay.sky.com.br/o/sky-play-theme/images/logo-sky.svg" alt="sky logo" />
+            </div>
         )
     }
 }

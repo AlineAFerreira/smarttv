@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addUser, getUsers } from '../../core/redux/actions/user';
+import './styles.css';
 
 class Users extends React.Component {
     componentDidMount() {
@@ -8,11 +9,8 @@ class Users extends React.Component {
     }
     render() {
         return (
-            <div>
-                Users <br />
-                <button onClick={() => this.props.onAddUserClicked()}>Add User</button>
-                <br />
-                {JSON.stringify(this.props.users)}
+            <div className="container-users">
+                <img src="https://skyplay.sky.com.br/o/sky-play-theme/images/logo-sky.svg" alt="sky logo" />
             </div>
         )
     }

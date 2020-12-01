@@ -1,0 +1,9 @@
+.container {
+  margin: 100px auto;
+}
+
+.container-users img {
+  display: block;
+  margin: 100px auto;
+  opacity: .7;
+}

@@ -1,4 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+    <img alt="SKY" src=".bitbucket/sky-logo-tv.png">
+</h1>
+
+<h3 align="center">
+  SKY homepage test developed
+</h3>
+
+
+## Technologies
+
+This project was developed with the following technologies:
+
+-  [React Js](https://reactjs.org/)
+-  [Redux](https://redux.js.org/)
+-  [Styled-components](https://www.styled-components.com/)
+-  [NPM](https://www.npmjs.com/)
+-  [VS Code](https://code.visualstudio.com/) with ESLint.
+
+
+## How to use
+
+
+```bash
+# Clone this repository
+$ git clone https://inf00200@bitbucket.skybr.digital/scm/mob/smart-tv.git
+
+# Access the folder
+$ cd smart-tv
+
+# Install dependencies
+$ yarn install
+
+```
 
 ## Available Scripts
 
@@ -37,32 +70,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
