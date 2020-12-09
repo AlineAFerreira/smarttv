@@ -1,19 +1,42 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addUser } from '../../core/redux/actions/user';
+import Carousel from '../../components/Carousel';
+import styled from 'styled-components';
+
 import './styles.css';
 
 class Home extends React.Component {
     render() {
         return (
-            <div className="container">
-                <img src="https://skyplay.sky.com.br/o/sky-play-theme/images/logo-sky.svg" alt="sky logo" />
-            </div>
+            <Container>
+                <div className="menu"></div>
+                <CarouselContainer>
+                    <Carousel />
+                    <Carousel />
+                    <Carousel />
+                </CarouselContainer>
+            </Container>
         )
     }
 }
 
-const mapStateToProps = ({users}) => {
+const Container = styled.div`
+    display:flex;
+    & .menu {
+        width: 7vw;
+        height: 100vh;
+        background-color: #000;
+        //161819
+    }
+`;
+
+const CarouselContainer = styled.div`
+
+`;
+
+
+const mapStateToProps = ({ users }) => {
     return {
         users: users.users
     }

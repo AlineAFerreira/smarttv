@@ -14,14 +14,14 @@ export default function App() {
     <Router>
       <div>
         <nav>
-          <ul>
+          {/* <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/users">Users</Link>
             </li>
-          </ul>
+          </ul> */}
         </nav>
 
         {/* A <Switch> looks through its children <Route>s and
