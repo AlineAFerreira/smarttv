@@ -7,6 +7,7 @@ import reducers from './core/redux'
 import App from './App'
 import rootSaga from './core/redux/sagas'
 import './index.css';
+import Login from './pages/login'
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
@@ -19,7 +20,7 @@ sagaMiddleware.run(rootSaga)
 
 render(
   <Provider store={store}>
-    <App />
+    <Login />
   </Provider>,
   document.getElementById('root')
 )

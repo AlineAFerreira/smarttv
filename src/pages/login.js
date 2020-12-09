@@ -67,10 +67,12 @@ const LoginPage = styled.div`
         align-items: flex-start;
         & .qrcode {
             margin-left:1vw;
+            width: 15vh;
         }
         & .info-text {
             width: 45vw;
             margin-left:1.5vw;
+            line-height:4.8vh;
         }
         & strong {
             display:block;
