@@ -39,7 +39,7 @@ export default class Login extends React.Component {
 const LoginPage = styled.div`
     margin: 0;
     padding-left: 9.3vw;
-    background-image: linear-gradient(to top, #161819, #161819);
+    background-image: #161819;
     height:100vh;
     width:90.7vw;
     color: #CCC;
