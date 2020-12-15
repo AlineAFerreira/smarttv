@@ -171,11 +171,11 @@ export const Container = styled.div`
   opacity: 0;
 }
 
-.side-nav-body .nav-item.terms {
+.side-nav-body .nav-item.config {
   margin-top: auto;
 }
 
-.side-nav-body .nav-item.terms .sky_icon {
+.side-nav-body .nav-item.config .sky_icon {
   width: 5.4vw;
   display: block;
 }

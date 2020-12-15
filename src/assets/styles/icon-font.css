@@ -123,4 +123,11 @@
   content: "\e99d";
 }
 
+.sky-icon-line-magnifier::before {
+  content: "\e94c";
+}
+
+.sky-icon-line-settings::before {
+  content: "\e95a";
+}
 
