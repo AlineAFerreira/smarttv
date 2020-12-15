@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'SKY-Icon-Font';
+  src: url("../fonts/SKY-Icon-Font.eot");
+  src: url("../fonts/SKY-Icon-Font.eot?#iefix") format("embedded-opentype"), url("../fonts/SKY-Icon-Font.woff") format("woff"), url("../fonts/SKY-Icon-Font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sky_icon {
+  font-family: 'SKY-Icon-Font' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  display: inline-block;
+  position: relative;
+}
+
+.sky-icon-line-cellphone::before {
+  content: "\e929";
+}
+
+.sky-icon-line-computer::before {
+  content: "\e901";
+}
+
+.sky-icon-line-people::before {
+  content: "\e902";
+}
+
+.sky-icon-line-home::before {
+  content: "\e940";
+}
+
+.tv-icon::before {
+  content: "\e969"
+}
+
+.sky-icon-line-filmroll::before {
+  content: "\e938";
+}
+
+.sky-icon-line-player-play::before {
+  content: "\e90c";
+}
+
+.sky-icon-filled-shopping-cart::before {
+  content: "\e983";
+}
+
+.sky_icon-filled-player-pause:before {
+  content: "\e970";
+}
+
+.sky_icon-line-backward-20:before {
+  content: "\e924";
+}
+
+.sky_icon-line-foward-20:before {
+  content: "\e93b";
+}
+
+.sky_icon-line-player-next::after {
+  content: "\e90f";
+}
+
+.sky_icon-filled-player-play:before {
+  content: "\e971";
+}
+
+.sky_icon-line-subtitles::before {
+  content: "\e961";
+}
+
+.sky-icon-filled-lock::before {
+  content: "\e97e";
+}
+
+.sky-icon-line-episodes::before {
+  content: "\e934";
+}
+
+.sky-icon-line-arrow-left-ios::before {
+  content: "\e918";
+}
+
+.sky-icon-filled-player-play:before {
+  content: "\e971";
+}
+
+.sky-icon-line-tv::before {
+  content: "\e237";
+}
+
+.sky-icon-line-trailer::before {
+  content: "\e968";
+}
+
+.sky-icon-line-arrow-swap-horizontal::before {
+  content: "\e91b";
+}
+
+.sky-icon-line-exit::before {
+  content: "\e936";
+}
+
+.sky-icon-line-player-next::before {
+  content: "\e90f";
+}
+
+.sky-icon-filled-arrow-down::before {
+  content: "\e972";
+}
+
+.sky-icon-filled-arrow-up::before {
+  content: "\e973";
+}
+
+.sky-icon-line-zapper::before {
+  content: "\e96f";
+}
+
+.sky-icon-line-infantil::before {
+  content: "\e99d";
+}
+
+

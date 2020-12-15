@@ -7,7 +7,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import GlobalStyle, {Container} from './styles';
+import GlobalStyle from './styles';
+import './assets/styles/icon-font.css';
 
 export default function App() {
   return (
