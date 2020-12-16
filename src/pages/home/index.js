@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addUser } from '../../core/redux/actions/user';
-import Carousel from '../../components/Carousel';
 import styled from 'styled-components';
+import GridCarousels from '../../components/GridCarousels';
 
 import './styles.css';
 
@@ -11,11 +11,7 @@ class Home extends React.Component {
         return (
             <Container>
                 <div className="menu"></div>
-                <CarouselContainer>
-                    <Carousel />
-                    <Carousel />
-                    <Carousel />
-                </CarouselContainer>
+                <GridCarousels />
             </Container>
         )
     }
@@ -23,17 +19,18 @@ class Home extends React.Component {
 
 const Container = styled.div`
     display:flex;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    background-color: #161819;
     & .menu {
         width: 7vw;
         height: 100vh;
         background-color: #000;
-        //161819
     }
-`;
+    `;
 
-const CarouselContainer = styled.div`
-
-`;
 
 
 const mapStateToProps = ({ users }) => {
