@@ -7,11 +7,13 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import './App.css';
+import GlobalStyle, {Container} from './styles';
 
 export default function App() {
   return (
-    <Router>
+    <>
+      <GlobalStyle />
+      <Router>
       <div>
         <nav>
           <ul>
@@ -39,5 +41,6 @@ export default function App() {
         </Switch>
       </div>
     </Router>
+    </>
   );
 }
