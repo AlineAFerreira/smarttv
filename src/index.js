@@ -5,9 +5,15 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import reducers from './core/redux'
 import App from './App'
+<<<<<<< HEAD
+import rootSaga from './core/redux/sagas';
+import './index.css';
+
+=======
 import rootSaga from './core/redux/sagas'
 import './index.css';
 import Login from './pages/login'
+>>>>>>> develop
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
