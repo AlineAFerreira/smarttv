@@ -9,52 +9,65 @@ export const Container = styled.div`
   color: #fff;
   background-color: transparent;
 
-
-&.visible {
-  width: 100%;
-  transform: translateX(0);
-  background: rgb(0,0,0);
-  background: linear-gradient(90deg, rgba(0,0,0,1) 25%, rgba(8,8,8,0.76234243697479) 63%, rgba(0,0,0,0) 100%);
-}
+  ${props => props.visible && `
+    transform: translateX(0);
+  `}
 
 .box-nav {
   display: flex;
   flex-flow: column;
-  width: 6.5vw;
+  width: 8vw;
   height: 100vh;
   transition: width .4s ease-in-out;
 }
 
-&.visible .box-nav {
-  width: 22vw;
-  background-color: transparent;
-}
+${props => props.visible && `
+  .box-nav {
+    width: 18vw;
+    background-color: transparent;
+  }
+`}
 
 .side-nav-header {
-  padding: 3vh 0  3.5vh !important
+  margin: 3vh 1vw 3.5vh !important
 }
 
 .side-nav-header > img {
   width: 3vw;
   height: 3vw;
-  margin: 0 1.4vw;
+  margin: 0 1.4vw 0 .5vw;
 }
 
-.side-nav-header > .nickname {
+.side-nav-header > .box-nickname {
   padding-bottom: 0.5vh;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   opacity: 0;
   flex: 1;
   transition: all .2s ease;
   transform: translateX(-15vw);
+  white-space: nowrap;
+  overflow: hidden;
+
+  .nickname {
+    flex: 1;
+    color: #fff;
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  span:last-of-type {
+    font-size: 1vw;
+  }
 }
 
-.main-nav.visible .side-nav-header > .nickname {
-  transform: translateX(0);
-  opacity: 1;
-}
+${props => props.visible && `
+  .side-nav-header > .box-nickname {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`}
 
 .side-nav-body {
   padding-top: 2vh;
@@ -64,24 +77,21 @@ export const Container = styled.div`
 }
 
 .side-nav-body .nav-item {
-  width: 100%;
+  min-width: 0;
   color: #bbb;
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-flow: row;
   -webkit-box-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
   align-items: center;
-  font-size: 1.3vw;
-  margin: .1vw 0;
-  padding: 1vw 0;
-  -webkit-transition: all .3s ease-out, padding .6s ease;
-  -moz-transition: all .3s ease-out, padding .6s ease;
-  -o-transition: all .3s ease-out, padding .6s ease;
-  transition: all .3s ease-out, padding .6s ease;
+  font-size: 1.2vw;
+  margin: .1vw 1vw;
+  -webkit-transition: background .3s ease-out, padding .6s ease;
+  -moz-transition: background .3s ease-out, padding .6s ease;
+  -o-transition: background .3s ease-out, padding .6s ease;
+  transition: background .3s ease-out, padding .6s ease;
+  border-radius: 6px;
 }
 
 @media (max-height: 620px) {
@@ -90,14 +100,17 @@ export const Container = styled.div`
     padding: 1vw 0;
   }
 }
-.main-nav.visible .side-nav-body .nav-item:hover,
-.main-nav.visible .side-nav-body .nav-item.nav-focused {
-  background: rgb(29,29,29);
-  background: linear-gradient(90deg, rgba(29,29,29,1) 4%, rgba(28,28,28,0.9220063025210083) 53%, rgba(1,1,1,0) 100%);
-}
 
-.side-nav-body .nav-item.active .sky_icon::after {
-  opacity: 1;
+${props => props.visible && `
+  .side-nav-body .nav-item:hover,
+  .side-nav-body .nav-item.nav-focused {
+    background: #363d3e;
+    font-weight: 600;
+  }
+`}
+
+.side-nav-body .nav-item.active .sky_icon {
+  background: #363d3e;
 }
 
 .side-nav-body .nav-item .sky_icon {
@@ -108,9 +121,12 @@ export const Container = styled.div`
   flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
-      align-items: center;
-  font-size: 1.8vw;
-  padding: 0 2.2vw;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6vw;
+  min-width: 4vw;
+  height: 3.8vw;
+  border-radius: 6px;
 }
 
 .side-nav-body .nav-item .nav-title {
@@ -118,6 +134,7 @@ export const Container = styled.div`
   white-space: nowrap;
   transform: translateX(-22vw);
   opacity: 0;
+  margin-left: 1.5vw;
 }
 
 .side-nav-body .nav-item:nth-child(1) .nav-title {
@@ -156,28 +173,15 @@ export const Container = styled.div`
   transition: transform .7s ease, opacity .2s;
 }
 
-.main-nav.visible .side-nav-body .nav-item .nav-title {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.side-nav-body .nav-item .sky_icon::after {
-  content: "";
-  display: block;
-  width: 80%;
-  height: 2px;
-  margin: 4px auto 0;
-  background-color: #f35c58;
-  opacity: 0;
-}
+${props => props.visible && `
+  .side-nav-body .nav-item .nav-title {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`}
 
 .side-nav-body .nav-item.config {
   margin-top: auto;
-}
-
-.side-nav-body .nav-item.config .sky_icon {
-  width: 5.4vw;
-  display: block;
 }
 
 .version {

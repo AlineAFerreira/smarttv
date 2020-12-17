@@ -1,15 +1,27 @@
 import React from 'react'
-import { Container } from './styles';
+import { Main, Container } from './styles';
 import Menu from './../../components/Menu';
+import Highlight from './../../components/Highlight';
 import News from './../../components/News';
 
   export default class Home extends React.Component {
+    state = {
+        menuIsOpen: false
+    }
+
+    animateContent = (bool) => {
+      this.setState({menuIsOpen: bool})
+    }
+
     render() {
         return (
-            <Container>
-                <Menu />
-                <News highlight={true} />
-            </Container>
+            <Main>
+                <Menu isOpen={this.animateContent}/>
+                <Container pushed={this.state.menuIsOpen}>
+                    <Highlight />
+                    <News highlight={true} />
+                </Container>
+            </Main>
         )
     }
 }

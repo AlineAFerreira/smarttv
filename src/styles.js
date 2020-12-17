@@ -21,39 +21,6 @@ export default createGlobalStyle`
     }
   }
 
-/* PARENTAL RATING   */
-.card-rating {
-    font-weight: bold;
-    border: 1px solid #fff;
-    border-radius: 0.2rem;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
 
-.rating-l {
-  background-color: #00a651;
-}
-
-.rating-10 {
-  background-color: #0095da;
-}
-
-.rating-12 {
-  background-color: #fbc115;
-}
-
-.rating-14 {
-  background-color: #f58220;
-}
-
-.rating-16 {
-  background-color: #ec1d25;
-}
-
-.rating-18 {
-  background-color: #000000;
-}
 
 `;

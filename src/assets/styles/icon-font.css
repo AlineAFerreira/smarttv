@@ -3,8 +3,7 @@
   src: url("../fonts/SKY-Icon-Font.eot");
   src: url("../fonts/SKY-Icon-Font.eot?#iefix") format("embedded-opentype"), url("../fonts/SKY-Icon-Font.woff") format("woff"), url("../fonts/SKY-Icon-Font.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 .sky_icon {
   font-family: 'SKY-Icon-Font' !important;
@@ -129,5 +128,13 @@
 
 .sky-icon-line-settings::before {
   content: "\e95a";
+}
+
+.sky-icon-line-live:before {
+  content: "\e9a5";
+}
+
+.sky-icon-line-info:before {
+  content: "\e943";
 }
 
