@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import createSagaMiddleware from 'redux-saga';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import reducers from './core/redux';
-import App from './App';
-import $ from 'jquery';
-import rootSaga from './core/redux/sagas';
-
-window.$ = $;
-=======
 import React from 'react'
 import createSagaMiddleware from 'redux-saga'
 import { render } from 'react-dom'
@@ -18,16 +5,8 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import reducers from './core/redux'
 import App from './App'
-<<<<<<< HEAD
-import rootSaga from './core/redux/sagas';
-import './index.css';
-
-=======
 import rootSaga from './core/redux/sagas'
-import './index.css';
 import Login from './pages/login'
->>>>>>> develop
->>>>>>> develop
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
