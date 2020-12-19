@@ -4,7 +4,6 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import reducers from './core/redux'
-import App from './App'
 import rootSaga from './core/redux/sagas'
 import SplashScreen from './components/SplashScreen'
 import GlobalStyle from './styles';
