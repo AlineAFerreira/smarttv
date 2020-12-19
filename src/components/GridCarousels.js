@@ -115,7 +115,7 @@ export default class GridCarousels extends React.Component {
 
 }
 const GridContainer = styled.div`
-    margin-top: 55vh;
+    margin-top: 5vh;
     position: relative;
     overflow: hidden;
     & .carousels {

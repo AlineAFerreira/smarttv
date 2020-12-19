@@ -19,7 +19,7 @@ sagaMiddleware.run(rootSaga)
 
 render(
   <Provider store={store}>
-    <Login />
+    <App />
   </Provider>,
   document.getElementById('root')
 )
