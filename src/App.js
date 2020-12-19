@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/series">
  
           </Route>
-          <Route path="/">
+          <Route path="/Login">
             <Login />
           </Route>
         </Switch>
