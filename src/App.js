@@ -1,12 +1,12 @@
 import React from "react";
-import Home from './pages/home'
-import Users from './pages/users'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import Login from './pages/login'
+import Home from './pages/home';
 import GlobalStyle from './styles';
 import './assets/styles/icon-font.css';
 
@@ -16,18 +16,18 @@ export default function App() {
       <GlobalStyle />
       <Router>
       <div>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
+          <Route path="/home">
             <Home />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/movies">
+ 
+          </Route>
+          <Route path="/series">
+ 
           </Route>
           <Route path="/">
-            <Home />
+            <Login />
           </Route>
         </Switch>
       </div>

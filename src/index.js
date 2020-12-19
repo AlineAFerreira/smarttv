@@ -6,7 +6,9 @@ import { createStore, applyMiddleware } from 'redux'
 import reducers from './core/redux'
 import App from './App'
 import rootSaga from './core/redux/sagas'
-import Login from './pages/login'
+import SplashScreen from './components/SplashScreen'
+import GlobalStyle from './styles';
+
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
@@ -18,8 +20,10 @@ const store = createStore(
 sagaMiddleware.run(rootSaga)
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <>
+  <GlobalStyle />
+  <SplashScreen />
+  </>,
+
   document.getElementById('root')
 )
