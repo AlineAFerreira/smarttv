@@ -34,7 +34,7 @@ export default function App() {
           <Route path="/movies">
             <Movies />
           </Route>
-          <Route path={process.env.PUBLIC_URL + '/'}>
+          <Route path="/">
             <Login />
           </Route>
         </Switch>
