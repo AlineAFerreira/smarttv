@@ -19,19 +19,19 @@ export default function App() {
       <GlobalStyle />
       <Router>
         <Switch>
-          <Route path="/home">
+          <Route path="sky-smarttv/home">
             <Home />
           </Route>
-          <Route exact path="/series">
+          <Route exact path="sky-smarttv/series">
             <Series />
           </Route>
-          <Route path="/series/details/:id">
+          <Route path="sky-smarttv/series/details/:id">
             <SerieDetails />
           </Route>
-          <Route path="/movies/details/:id">
+          <Route path="sky-smarttv/movies/details/:id">
             <MovieDetails />
           </Route>
-          <Route path="/movies">
+          <Route path="sky-smarttv/movies">
             <Movies />
           </Route>
           <Route path="/">
