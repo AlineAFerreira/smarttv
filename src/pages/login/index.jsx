@@ -17,7 +17,7 @@ export default class Login extends React.Component {
 
       handlerKey = (e) => {    
         if (e.keyCode === KeyCodes.KEY_RIGHT) {
-          window.location.href = '/home'
+            window.location.href = window.location.href + 'home'
         }
       }
 
