@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 100px auto;
+}
+
+.container img {
+  display: block;
+  margin: 100px auto;
+}
