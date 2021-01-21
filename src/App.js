@@ -17,24 +17,24 @@ export default function App() {
   return (
     <>
       <GlobalStyle />
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route path="sky-smarttv/home">
+          <Route path="/home">
             <Home />
           </Route>
-          <Route exact path="sky-smarttv/series">
+          <Route exact path="/series">
             <Series />
           </Route>
-          <Route path="sky-smarttv/series/details/:id">
+          <Route path="/series/details/:id">
             <SerieDetails />
           </Route>
-          <Route path="sky-smarttv/movies/details/:id">
+          <Route path="/movies/details/:id">
             <MovieDetails />
           </Route>
-          <Route path="sky-smarttv/movies">
+          <Route path="/movies">
             <Movies />
           </Route>
-          <Route path="/">
+          <Route path={process.env.PUBLIC_URL + '/'}>
             <Login />
           </Route>
         </Switch>
