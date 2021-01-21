@@ -17,7 +17,7 @@ export default function App() {
   return (
     <>
       <GlobalStyle />
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Switch>
           <Route path="/home">
             <Home />
