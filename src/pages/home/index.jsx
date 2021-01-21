@@ -17,7 +17,7 @@ class Home extends React.Component {
         <BoxLogo />
         <Container pushed={this.props.menuIsOpen}>
           <Header page="Início" section="Novidades" />
-          <Highlight />
+          {/* <Highlight /> */}
           <News highlight={true} />
           <GridCarousels />
         </Container>

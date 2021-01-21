@@ -3,8 +3,24 @@ import Logo from '../../assets/logo-branco.png';
 import QRCode from '../../assets/deeplink-qrcode.png';
 import AuthNumbers from '../../components/AuthNumbers';
 import { LoginPage } from './styles';
+import { Events } from '../../util/Events';
+import { KeyCodes } from '../../util/Utils';
 
 export default class Login extends React.Component {
+    componentDidMount() {
+        document.addEventListener(Events.keydown, this.handlerKey, false);    
+      }
+    
+      componentWillUnmount() {
+        document.removeEventListener(Events.keydown, this.handlerKey, false);
+      }
+
+      handlerKey = (e) => {    
+        if (e.keyCode === KeyCodes.KEY_RIGHT) {
+          window.location.href = '/home'
+        }
+      }
+
     render() {
         return (
             <LoginPage>
