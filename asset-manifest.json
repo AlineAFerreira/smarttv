@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/smarttv/static/css/main.49d386e9.chunk.css",
+    "main.js": "/smarttv/static/js/main.36e1b189.chunk.js",
+    "main.js.map": "/smarttv/static/js/main.36e1b189.chunk.js.map",
+    "runtime-main.js": "/smarttv/static/js/runtime-main.124da6f8.js",
+    "runtime-main.js.map": "/smarttv/static/js/runtime-main.124da6f8.js.map",
+    "static/js/2.ccc7d01c.chunk.js": "/smarttv/static/js/2.ccc7d01c.chunk.js",
+    "static/js/2.ccc7d01c.chunk.js.map": "/smarttv/static/js/2.ccc7d01c.chunk.js.map",
+    "index.html": "/smarttv/index.html",
+    "precache-manifest.b5d07cd28bda788699a8c8a0b9d9ca59.js": "/smarttv/precache-manifest.b5d07cd28bda788699a8c8a0b9d9ca59.js",
+    "service-worker.js": "/smarttv/service-worker.js",
+    "static/css/main.49d386e9.chunk.css.map": "/smarttv/static/css/main.49d386e9.chunk.css.map",
+    "static/js/2.ccc7d01c.chunk.js.LICENSE.txt": "/smarttv/static/js/2.ccc7d01c.chunk.js.LICENSE.txt",
+    "static/media/icon-font.css": "/smarttv/static/media/SKY-Icon-Font.fadcffe9.ttf",
+    "static/media/background-login.jpg": "/smarttv/static/media/background-login.63f3054a.jpg",
+    "static/media/logo-branco.png": "/smarttv/static/media/logo-branco.0b3af3d6.png",
+    "static/media/sky_logo-white.png": "/smarttv/static/media/sky_logo-white.0b3af3d6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.124da6f8.js",
+    "static/js/2.ccc7d01c.chunk.js",
+    "static/css/main.49d386e9.chunk.css",
+    "static/js/main.36e1b189.chunk.js"
+  ]
+}
