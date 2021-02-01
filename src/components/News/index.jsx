@@ -124,7 +124,6 @@ class News extends Component {
     );
   }
 }
-<<<<<<< HEAD
 
 const mapStateToProps = (state)=> {
   return {
@@ -144,5 +143,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(News);
-=======
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
