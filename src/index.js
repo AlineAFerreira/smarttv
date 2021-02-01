@@ -4,14 +4,8 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import reducers from './core/redux'
-<<<<<<< HEAD
 import App from './App'
 import rootSaga from './core/redux/sagas'
-=======
-import rootSaga from './core/redux/sagas'
-import SplashScreen from './components/SplashScreen'
-import GlobalStyle from './styles';
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
 
 
 const sagaMiddleware = createSagaMiddleware()

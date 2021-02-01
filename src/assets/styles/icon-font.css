@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* @font-face {
   font-family: 'SKY-Icon-Font';
   src: url("https://cms-dev.sky.com.br/o/sky-design-system-theme/fonts/SKY-Icon-Font.eot");
@@ -15,14 +14,6 @@
     font-weight: normal;
     font-style: normal;
   }
-=======
-@font-face {
-  font-family: 'SKY-Icon-Font';
-  src: url("../fonts/SKY-Icon-Font.eot");
-  src: url("../fonts/SKY-Icon-Font.eot?#iefix") format("embedded-opentype"), url("../fonts/SKY-Icon-Font.woff") format("woff"), url("../fonts/SKY-Icon-Font.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
 
 .sky_icon {
   font-family: 'SKY-Icon-Font' !important;
@@ -37,13 +28,10 @@
   content: "\e929";
 }
 
-<<<<<<< HEAD
 .sky_icon-filled-favorite::before {
   content: "\e979";
 }
 
-=======
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
 .sky-icon-line-computer::before {
   content: "\e901";
 }
@@ -164,7 +152,6 @@
   content: "\e943";
 }
 
-<<<<<<< HEAD
 .sky-icon-line-price-tag:before {
   content: "\e99e";
 }
@@ -212,5 +199,3 @@
 .sky-icon-line-corner-up-right:before {
   content: "\e236";
 }
-=======
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed

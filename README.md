@@ -3,11 +3,7 @@
 </h1>
 
 <h3 align="center">
-<<<<<<< HEAD
   SKY - SmartTV app
-=======
-  SKY homepage test developed
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
 </h3>
 
 
@@ -27,17 +23,12 @@ This project was developed with the following technologies:
 
 ```bash
 # Clone this repository
-<<<<<<< HEAD
 $ git clone https://[YOUR_SKY_ID_HERE]@bitbucket.skybr.digital/scm/mob/smart-tv.git
-=======
-$ git clone https://inf00200@bitbucket.skybr.digital/scm/mob/smart-tv.git
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
 
 # Access the folder
 $ cd smart-tv
 
 # Install dependencies
-<<<<<<< HEAD
 $ npm install
 
 ```
@@ -47,17 +38,6 @@ $ npm install
 In the project directory, you can run:
 
 ### `npm start`
-=======
-$ yarn install
-
-```
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -65,20 +45,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-<<<<<<< HEAD
 ### `npm test`
-=======
-### `yarn test`
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<<<<<<< HEAD
 ### `npm run build`
-=======
-### `yarn build`
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -88,11 +60,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-<<<<<<< HEAD
 ### `npm run eject`
-=======
-### `yarn eject`
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -102,7 +70,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-<<<<<<< HEAD
 ## Components usage
 
 ### News
@@ -122,5 +89,3 @@ icon1 | string | no | n/a | Icon class that should appear before the button text
 icon2 | string | no | n/a | Icon class that should appear after the button text
 align | string | no | left | Dropdown list box alignment
 active | boolean | no | false | If true add a class to show if it is active
-=======
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed

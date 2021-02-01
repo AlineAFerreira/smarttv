@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-<<<<<<< HEAD
   grid-template-rows: auto;
   grid-auto-flow: row;
   grid-gap: 15px;
@@ -13,15 +12,6 @@ export const Container = styled.div`
     grid-template-columns: 64% 34%;
     grid-template-rows: auto auto;
     height: 30vw;
-=======
-  grid-template-rows: auto auto;
-  grid-auto-flow: row;
-  grid-gap: 15px;
-  height: 30vw;
-
-  ${props => props.highlight && `
-    grid-template-columns: 64% 34%;
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
   `}
 
   > div {

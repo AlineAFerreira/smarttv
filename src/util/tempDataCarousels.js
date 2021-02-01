@@ -1,6 +1,5 @@
 const tempData = [
    {
-<<<<<<< HEAD
       title: 'carrossel 4',
       isLive: true,
       cards: [
@@ -93,8 +92,6 @@ const tempData = [
       ]
    },
    {
-=======
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
       title: 'carrossel 1',
       cards: [
          {
