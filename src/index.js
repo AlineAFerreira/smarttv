@@ -18,16 +18,8 @@ const store = createStore(
 sagaMiddleware.run(rootSaga)
 
 render(
-<<<<<<< HEAD
   <Provider store={store}>
     <App />
   </Provider>,
-=======
-  <>
-  <GlobalStyle />
-  <SplashScreen />
-  </>,
-
->>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
   document.getElementById('root')
 )
