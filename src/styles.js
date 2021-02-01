@@ -21,6 +21,7 @@ export default createGlobalStyle`
     }
   }
 
+<<<<<<< HEAD
   // HELPER CLASSES
 
   .bullet {
@@ -42,3 +43,8 @@ export const COLORS = {
   bgBox: '#242A2C',
   bgLightest: '#FFFFFF'
 }
+=======
+
+
+`;
+>>>>>>> 4bfdf7b01511592715ceb8aada3cbbb77be203ed
