@@ -9,7 +9,6 @@ import {
   HashRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from './styles';
 import './assets/styles/icon-font.css';
-import SignatureAndProfilePage from "./pages/signatureAndProfile";
 
 export default function App() {
   return (
@@ -23,9 +22,9 @@ export default function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/signaturesAndProfile">
+          {/* <Route path="/signaturesAndProfile">
             <SignatureAndProfilePage />
-          </Route>
+          </Route> */}
           <Route exact path="/series">
             <Series />
           </Route>
