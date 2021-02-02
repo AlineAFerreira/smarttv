@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import BackButton from '../../components/BackButton';
+import MoreInfo from '../../components/MoreInfo';
 // To do: DADOS TEMPORÁRIOS, REMOVER QUANDO OS DADOS DINÂMICOS FOREM INSERIDOS
 import { tempData } from '../../util/tempDataContentSheet';
 import ContentSheet from '../../components/ContentSheet';
@@ -18,6 +20,8 @@ export default class MovieDetails extends Component {
   render() {
     return (
       <Container>
+        <MoreInfo />
+        <BackButton />
         <Dots>
           <span className="active"></span><span></span><span></span>
         </Dots>

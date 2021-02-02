@@ -1,4 +1,8 @@
 import styled from 'styled-components';
+import { COLORS } from '../../styles';
+
+const { bgBox, textDisable } = COLORS;
+
 
 const CardSizes = {
     heightRelatedSizes: {
@@ -17,30 +21,30 @@ const CardTypes = {
 const Container = styled.div`
     width: ${CardSizes.heightRelatedSizes.width}vh;
     height: ${CardSizes.heightRelatedSizes.height}vh;
-    background: ${props => props.type === CardTypes.content ? 'url(' + props.cover.url + ')' : '#363D3E'};
+    background: ${props => props.type === CardTypes.content ? 'url(' + props.cover.url + ')' : bgBox};
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
     border-radius: .6vh;
-    & .infos {
-        text-align: center;
-        height: 22vh;        
-        margin-top: 8vh;
+    .infos {
+        height: ${CardSizes.heightRelatedSizes.height}vh;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-around;
-        & img {
-            width: 9vh;
+        padding: 3vh;
+        .sky_icon {
+            font-size: 7vh;
         }
-        & span {
-            display: block;
-            font-size: 2.1vh;
-            font-weight: bold;
-            & span {
-                font-weight: normal;
-                color: #A3A3A3;
-                font-size: 1.8vh;
+        .text {
+            height: 40%;
+            font-size: 3vh;
+            .title {
+                display: block;
+            }
+            .qty {
+                color: ${textDisable};
+                line-height: 6vh;
             }
         }
     }

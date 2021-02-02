@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { COLORS } from "../../styles";
 import { CardSizes } from '../Card/styles';
 
 const { width: widthCard, height: heightCard } = CardSizes.heightRelatedSizes;
-
+const { textDisable, textPrimary, bgBox, bgBar, brand } = COLORS;
 const CardL = styled.div`
     width: ${widthCard * 2}vh;
     height: ${heightCard}vh;
@@ -11,7 +12,7 @@ const CardL = styled.div`
 `;
 
 const Infos = styled.div`
-    background-color: #272b2d;
+    background-color: ${bgBox};
     height: ${heightCard / 2}vh;
     display: flex;
     flex-direction: column;
@@ -19,7 +20,7 @@ const Infos = styled.div`
 `;
 
 const Image = styled.div`
-    background-color: #2A2F30;
+    background-color: ${bgBar};
     background-image: ${props => props.background ? 'url(' + props.background.url + ')' : null};
     background-position: center;
     background-repeat: no-repeat;
@@ -32,7 +33,7 @@ const Line = styled.div`
     justify-content: ${props => props.justify ? 'space-between' : 'flex-start'};
     padding: 0 2vh;
     font-size: 2.4vh;
-    color: rgba(255, 255, 255, .7);
+    color: ${textDisable};
     align-items: center;
     & .card-rating {
         padding: .2vh;
@@ -43,7 +44,7 @@ const Line = styled.div`
 
 const Title = styled.h2`
     font-size: 2.8vh;
-    color: #FFF
+    color: ${textPrimary};
 `;
 
 const Schedule = styled.div`
@@ -54,13 +55,13 @@ const Favorites = styled.div``;
 
 const ProgressBar = styled.div`
     width: ${(widthCard * 2) - 4}vh;
-    background-color: #2A2F30;
+    background-color: ${bgBar};
     height: 1vh;
     border-radius: 1vh;
     &:after {
         border-radius: 1vh;
         height: 1vh;
-        background-color: #d81818;
+        background-color: ${brand};
         width: ${props => props.percent}%;
         display: block;
         content: ' ';

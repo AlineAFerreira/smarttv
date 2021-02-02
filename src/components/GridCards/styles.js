@@ -1,7 +1,10 @@
 import styled from 'styled-components';
+import { COLORS } from '../../styles';
 import { CardSizes } from '../Card/styles';
 
 const cardMarginHeightRelated = 2;
+
+const { textPrimary, textSecondary } = COLORS;
 
 const Container = styled.div`
     position: relative;
@@ -18,12 +21,12 @@ const Cards = styled.div`
     & .infos {
         display: flex;
         justify-content: space-between;
-        color: rgba(255, 255, 255, 0.7);
+        color: ${textSecondary};
         position: absolute;
         width:  80vw;
         font-size: 2.7vh;
         & h2 {
-            color: #FFF;
+            color: ${textPrimary};
             font-size: 3.4vh;
         }
     }

@@ -1,49 +1,28 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { toggleMenu } from '../../core/redux/actions/menu';
 import ParentalRating from '../ParentalRating';
 import { dataTemp } from '../../util/tempDataNews';
 import { Events } from '../../util/Events';
-import { KeyCodes } from '../../util/Utils';
+import { KeyCodes, TypeToRoutes } from '../../util/Utils';
 import { Container } from './styles';
 
 class News extends Component {
+
+  constructor(props) {
+    super(props);
+    this.news = React.createRef();
+  }
   state = {
     selectedItem: null
   }
 
-  setItems = () =>  {
-    return dataTemp.map((item, index) => {
-      return (
-        <div key={item.id} className={`item ${this.state.selectedItem === index ? 'active' : ''}`} style={{ backgroundImage: `url(${item.cover})` }} onClick={this.openDetails}>    
-          <ParentalRating rating={item.parentRating} />        
-          <div className="box-info">
-              <h2>{item.title}</h2>                
-              <p>
-                {this.props.highlight ? 
-                  item.description :
-                  <>
-                    {item.year}
-                    <i className="bullet" type={item.genre}></i>
-                    {item.genre}
-                  </>
-                } 
-              </p>
-              <div className="details">
-                <span className="sky_icon sky-icon-line-info"></span>
-              </div>
-          </div>
-        </div>
-      )
-    })
+  componentDidMount() {
+    this.handleOnAndOffEvents(true);
   }
 
-  openDetails = () => {
-    alert('Open Details')
-  }
-
-  openMenu = () => {
-    this.props.toggleMenu(true, this.handleOnAndOffEvents);
+  componentWillUnmount() {
     this.handleOnAndOffEvents(false);
   }
 
@@ -56,7 +35,7 @@ class News extends Component {
       this.setState({selectedItem: null})
     } 
   }
-
+  
   handlerKey = (e) => {
     if (e.keyCode === KeyCodes.KEY_RIGHT) {     
       if (this.props.highlight) {
@@ -108,17 +87,56 @@ class News extends Component {
     }
   }
 
-  componentDidMount() {
-    this.handleOnAndOffEvents(true);
+  setItems = () =>  {
+    return dataTemp.map((item, index) => {
+      return (
+        <div 
+          key={index} 
+          id={item.id}
+          mediatype={item.mediaType}
+          className={`item ${this.state.selectedItem === index ? 'active' : ''}`} 
+          style={{ backgroundImage: `url(${item.cover})` }} 
+          onClick={this.openDetails} 
+        >    
+          <ParentalRating rating={item.parentRating} />        
+          <div className="box-info">
+              <h2>{item.title}</h2>                
+              <p>
+                {this.props.highlight ? 
+                  item.description :
+                  <>
+                    {item.year}
+                    <i className="bullet" type={item.genre}></i>
+                    {item.genre}
+                  </>
+                } 
+              </p>
+              <div className="details">
+                <span className="sky_icon sky-icon-line-info"></span>
+              </div>
+          </div>
+        </div>
+      )
+    })
   }
 
-  componentWillUnmount() {
+  openDetails = (e) => {
+    // Se for click com Magic Control pega o evento, se for controle convencional pega o elemento ativo
+    const elem = e ? e.currentTarget : this.news.current.getElementsByClassName('active')[0];
+    const id = elem.id;
+    const itemType = elem.getAttribute('mediatype').toLowerCase();
+    const url = `${TypeToRoutes[itemType]}/details/${id}`;
+    this.props.history.push(url)
+  }
+
+  openMenu = () => {
+    this.props.toggleMenu(true, this.handleOnAndOffEvents);
     this.handleOnAndOffEvents(false);
   }
 
   render() {   
     return (
-      <Container highlight={this.props.highlight}>
+      <Container ref={this.news} highlight={this.props.highlight}>
         {this.setItems()}
       </Container>
     );
@@ -139,7 +157,7 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(News);
+)(News));

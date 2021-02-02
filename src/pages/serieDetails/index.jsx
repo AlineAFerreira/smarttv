@@ -7,15 +7,21 @@ import BackButton from '../../components/BackButton';
 import ContentSheet from '../../components/ContentSheet';
 import Catalog from '../../components/Catalog';
 import { Container, Dots, NextSession } from './styles';
+import RelatedContent from '../../components/relatedContent';
+import tempRelatedMovieData from '../../util/tempDataRelatedContentMovie';
 
 export default class SerieDetails extends React.Component {
     state = {
         activeArrow : false,
-        moreInfoisVisible: true
+        moreInfoisVisible: false
     }
 
     activeArrow = (bool) => {
         if (bool) this.setState({activeArrow: bool})
+    }
+
+    showMoreInfo = (bool) => {
+        if (bool) this.setState({moreInfoisVisible: bool})
     }
       
     render() {
@@ -23,15 +29,16 @@ export default class SerieDetails extends React.Component {
 
         return (
             <Container>
-                <MoreInfo visible={isVisible} />
+                <MoreInfo />
                 <BackButton />
                 <Dots>
-                <span className="active"></span><span></span><span></span>
+                    <span className="active"></span><span></span><span></span>
                 </Dots>
                 {/* To do: Navegação entre as seções */}
-                <ContentSheet data={tempData} mediaType={1} activeArrowNext={this.activeArrow}/>
+                <ContentSheet data={tempData} mediaType={1} activeArrowNext={this.activeArrow} showInfo={this.showMoreInfo}/>
                 {/* <Catalog></Catalog> */}
                 {/* <CarouselEpisodesSeries data={tempDataCarouselEpsisodes} /> */}
+                <RelatedContent data={tempRelatedMovieData} />
                 <NextSession className={this.state.activeArrow ? 'active' : ''}/>
             </Container>
         )

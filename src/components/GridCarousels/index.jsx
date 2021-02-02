@@ -79,12 +79,12 @@ export default class GridCarousels extends React.Component {
     fillCarousels() {
         let carousels = [];
         for (let i in tempData) {
-            if (parseInt(i) !== 0) {
+            if (!tempData[i].isLive) {
                 tempData[i].cards.push({
                     type: 'button',
-                    icon: 'https://www.bluevy.com.my/wp-content/uploads/2019/08/and-more-icon-16.png',
-                    title: 'Ver todos',
-                    subTitle: `${tempData[i].cards.length} conteúdos`
+                    icon: 'sky-icon-line-my-list',
+                    title: 'Lista completa',
+                    subTitle: `${tempData[i].cards.length}`
                 });
             }
             carousels.push({

@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import { COLORS } from "../../styles";
+
+const { bgActive, bgBar, textLinkDefault, textPrimary, brand } = COLORS;
 
 const Container = styled.div`
     display: flex;
 `;
 
 const bgsButtons = {
-    default: "#272b2d",
-    current: "#363d3e",
-    selected: "linear-gradient(to bottom, #ff5454, #d81818)"
+    default: bgBar,
+    current: bgActive,
+    selected: `linear-gradient(to bottom,${textLinkDefault} , ${brand})`
 }
 
 const Button = styled.div`
@@ -18,7 +21,7 @@ const Button = styled.div`
     line-height: 6vh;
     text-align: center;
     border-radius: 1vh;
-    color: #FFF;
+    color: ${textPrimary};
     width: ${props => props.isCurrent ? '25vh' : '8vh'};
     transition: all .2s;
     background: ${props => props.isSelected ? bgsButtons.selected : props.isCurrent ? bgsButtons.current : bgsButtons.default};

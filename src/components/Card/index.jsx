@@ -14,13 +14,13 @@ export default class Card extends React.Component {
             return (
                 <Container type={this.props.type}>
                     <div className="infos">
-                        <img src={icon} />
+                        <span className={`sky_icon ${icon}`} />
                         <div className="text">
                             <span className="title">
                                 {title}
-                                <span>
-                                    {subTitle}
-                                </span>
+                            </span>
+                            <span className="qty">
+                                {subTitle}
                             </span>
                         </div>
                     </div>

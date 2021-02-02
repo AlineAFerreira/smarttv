@@ -6,12 +6,10 @@ import Movies from './pages/movies';
 import MovieDetails from './pages/movieDetails';
 import SerieDetails from "./pages/serieDetails";
 import {
-  HashRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+  HashRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from './styles';
 import './assets/styles/icon-font.css';
+import SignatureAndProfilePage from "./pages/signatureAndProfile";
 
 export default function App() {
   return (
@@ -19,8 +17,14 @@ export default function App() {
       <GlobalStyle />
       <Router>
         <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/signaturesAndProfile">
+            <SignatureAndProfilePage />
           </Route>
           <Route exact path="/series">
             <Series />
@@ -28,14 +32,11 @@ export default function App() {
           <Route path="/series/details/:id">
             <SerieDetails />
           </Route>
-          <Route path="/movies/details/:id">
-            <MovieDetails />
-          </Route>
-          <Route path="/movies">
+          <Route exact path="/movies">
             <Movies />
           </Route>
-          <Route path="/">
-            <Login />
+          <Route path="/movies/details/:id">
+            <MovieDetails />
           </Route>
         </Switch>
       </Router>

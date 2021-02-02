@@ -149,8 +149,8 @@ const mapStateToProps = (state)=> {
 
 const mapDispatchToProps = dispatch => {
   return {
-    toggleMenu: page => {
-      dispatch(toggleMenu(page))
+    toggleMenu: state => {
+      dispatch(toggleMenu(state))
     }    
   }
 }

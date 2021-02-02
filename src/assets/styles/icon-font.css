@@ -24,6 +24,10 @@
   position: relative;
 }
 
+.sky-icon-line-my-list:before {
+  content: "\e998";
+}
+
 .sky-icon-line-cellphone::before {
   content: "\e929";
 }
@@ -34,6 +38,10 @@
 
 .sky-icon-line-computer::before {
   content: "\e901";
+}
+
+.sky-icon-line-settings::before {
+  content: "\e95a";
 }
 
 .sky-icon-line-people::before {
@@ -106,6 +114,10 @@
 
 .sky-icon-line-trailer::before {
   content: "\e968";
+}
+
+.sky_icon-line-confirm:before {
+  content: "\e92e";
 }
 
 .sky-icon-line-arrow-swap-horizontal::before {

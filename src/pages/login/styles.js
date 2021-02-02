@@ -1,28 +1,31 @@
 import styled from 'styled-components';
+import { COLORS } from '../../styles';
+import BgLogin from '../../assets/images/background-login.jpg';
 
 const LoginPage = styled.div`
     margin: 0;
-    padding-left: 9.3vw;
-    background-color: #161819;
+    padding-left: 20vh;
     font-family: 'Roboto', sans-serif;
-    height:100vh;
-    width:90.7vw;
-    color: #CCC;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(${BgLogin});
+    background-size: cover;
+    color: ${COLORS.textSecondary};
     & .content {
-        position:absolute;
-        margin-top:5vh;
-        font-size:2.9vh;
+        position: absolute;
+        margin-top: 5vh;
+        font-size: 2.5vh;
         height: 90vh;
         display: flex;
         justify-content:space-around;
         flex-direction:column;
     }
     & .logo {
-        width:11.5vw;
+        width: 15vh;
     }
 
     & .welcome-text {
-        color: white;
+        color: ${COLORS.textPrimary};
         width: 37.7vw;
         font-size: 4.2vh;
         font-weight: bold;
@@ -32,25 +35,25 @@ const LoginPage = styled.div`
         align-items: flex-start;
         & .qrcode {
             margin-left:1vw;
-            width: 15vh;
+            width: 13vh;
         }
         & .info-text {
             width: 45vw;
-            margin-left:1.5vw;
-            line-height:4.8vh;
+            margin-left: 1.5vw;
+            line-height: 4.5vh;
         }
         & strong {
             display:block;
         }
         & .number {
-            width:3.5vw;
+            width: 6.5vh;
             border-radius:50%;
-            border: 1px solid #fff;
-            color: #fff;
+            border: 1px solid ${COLORS.textSecondary};
+            color: ${COLORS.textPrimary};
             text-align: center;
-            line-height: 3.3vw;
+            line-height: 6.5vh;
             font-weight: bold;
-            height: 3.5vw;
+            height: 6.5vh;
             margin: 0 1vw 0 0;
         }
     }

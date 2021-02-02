@@ -14,6 +14,13 @@ const ActionButtons = {
   }
 }
 
+// MEDIA TYPE FOR ROUTES
+const TypeToRoutes = {
+  movie: 'movies',
+  serie: 'series',
+  live: 'live'
+}
+
 const KeyCodes = {
   KEY_UP: 38,
   KEY_DOWN: 40,
@@ -91,4 +98,6 @@ const getImageByType = (arrImages, type) => (
 
 const getPercent = (n1, n2) => n1 / 100 * n2;
 
-export { ActionButtons, KeyCodes, MenuItems, getImageByType, getPercent };
+const cutText = (text, qtyWords) => text.split(" ").splice(0, qtyWords).join(" ");
+
+export { ActionButtons, TypeToRoutes, KeyCodes, MenuItems, getImageByType, getPercent, cutText };

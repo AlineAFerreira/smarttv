@@ -1,6 +1,6 @@
 const tempData = [
    {
-      title: 'carrossel 4',
+      title: 'Canais Ao Vivo',
       isLive: true,
       cards: [
          {

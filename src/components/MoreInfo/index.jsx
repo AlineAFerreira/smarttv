@@ -1,37 +1,142 @@
 import React, { Component } from 'react';
-import {Container, Content, BoxLeft, BoxRight, Title, Description, Button, BoxImg, BackButton } from './styles';
+import { connect } from 'react-redux';
+import { toggleInfoVisibility } from '../../core/redux/actions/shared';
+import { Events } from '../../util/Events';
+import { KeyCodes } from '../../util/Utils';
+import {Container, Content, BoxLeft, BoxRight, Title, Description, BoxButton, Button, BoxImg, BackButton } from './styles';
 
-export default class MoreInfo extends Component {
+class MoreInfo extends Component {
   state = {
-    isVisible: this.props.visible,
+    isVisible: false,
     selectedItem: 0
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.moreInfoisVisible !== this.state.isVisible) 
+      this.setState({isVisible : nextProps.moreInfoisVisible}, ()=> this.handleOnAndOffEvents(true))
+  }
+
+  handleOnAndOffEvents = (state) => {
+    if (state) {
+      document.addEventListener(Events.keydown, this.handlerKey, false);      
+    } else {      
+      document.removeEventListener(Events.keydown, this.handlerKey, false);
+      this.setState({selectedItem: 0})
+    } 
+  }
+
+  handlerKey = (e) => {
+    if (e.keyCode === KeyCodes.KEY_RIGHT) {     
+      this.moveFocusRight();
+    }
+    
+    if (e.keyCode === KeyCodes.KEY_LEFT) {
+      this.moveFocusLeft();
+    }
+
+    if (e.keyCode === KeyCodes.KEY_UP) {
+      this.moveFocusUp();
+    }
+
+    if (e.keyCode === KeyCodes.KEY_DOWN) {
+      this.moveFocusDown();
+    }
+
+    if (e.keyCode === KeyCodes.ENTER) {
+      this.handleEnter();
+    }
+  }
+
+  moveFocusRight = () => {
+    const selectedItem = this.state.selectedItem;
+    const totalItems = this.props.data.actionBtn.length;
+    if (selectedItem < totalItems) this.setState({selectedItem : selectedItem + 1})
+  }
+
+  moveFocusLeft = () => {
+    const selectedItem = this.state.selectedItem;
+    if (selectedItem > 0) this.setState({selectedItem : selectedItem - 1})
+  }
+
+  moveFocusUp = () => {
+    const selectedItem = this.state.selectedItem;
+    const totalItems = this.props.data.actionBtn.length;
+    if (selectedItem === totalItems) this.setState({selectedItem : 0})
+  }
+
+  moveFocusDown = () => {
+    const selectedItem = this.state.selectedItem;
+    const totalItems = this.props.data.actionBtn.length;
+    if (selectedItem < totalItems) this.setState({selectedItem : totalItems})
+  }
+
+  handleEnter = () => {
+    this.handleOnAndOffEvents(false);
+    this.setState({isVisible:false}, ()=> this.props.toggleInfoVisibility(false));
   }
 
   render() {
     const selectedItem = this.state.selectedItem;
-    //To do: Inserir dados dinâmicos Title, Description e souce do BoxImg
-    // Constant tempData deverá ser excluída
-    const tempData = 'https://picsum.photos/id/237/600/300';
+    const { title, description, actionBtn, backBtn, images} = this.props.data;
+    const closeBtnIndex = actionBtn ? actionBtn.length : 0;
+
     return (
       <Container visible={this.state.isVisible}>
         <Content>
           <BoxLeft>
-            <Title>Lorem Ipsum </Title>
+            <Title>{title}</Title>
             <Description>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+              {description}
             </Description>
-            <Button className={`btn-watch ${selectedItem === 0 && 'active'}`}>Assistir</Button>
-          </BoxLeft>
+            <BoxButton>
+              {actionBtn &&
+                actionBtn.map((btn, i) => (
+                  <Button key={i} className={`btn-watch ${selectedItem === i ? 'active' : ''}`}>
+                    { btn.icon &&
+                      <span className={`sky_icon sky-icon-filled-${btn.icon}`}></span>
+                    }
+                    {btn.label}
+                  </Button>
+                ))
+              }
+            </BoxButton>
+          </BoxLeft>          
           <BoxRight>
-            <BoxImg source={tempData} />
-            <BoxImg source={tempData} />
+            {images && 
+              images.map((img, i) => <BoxImg key={i} source={img} />)
+            }
           </BoxRight>
         </Content>
-        <BackButton onClick={()=> this.setState({isVisible:false})}>
-          <i className="sky_icon sky-icon-line-corner-up-right"></i>
-          <span>Informações</span>
-        </BackButton>
+        {backBtn &&
+          <BackButton 
+            className={selectedItem === closeBtnIndex && 'active'}
+            onClick={backBtn.callbackAction ? backBtn.callbackAction : this.handleEnter }>
+            <i className={`sky_icon ${backBtn.icon}`}></i>
+            <span>{backBtn.label}</span>
+          </BackButton>                        
+        }
       </Container>
     );
   }
 }
+
+
+const mapStateToProps = (state)=> {
+  return {
+    moreInfoisVisible: state.shared.moreInfoisVisible,
+    data: state.shared.modalInfoData
+  }
+}
+  
+const mapDispatchToProps = dispatch => {
+  return {
+    toggleInfoVisibility: state => {
+      dispatch(toggleInfoVisibility(state))
+    }    
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MoreInfo);

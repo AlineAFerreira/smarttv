@@ -6,7 +6,7 @@ export default class AuthNumbers extends React.Component {
     render() {
         return (
             <div>
-                <span>Digite no app, o código abaixo e boa diversão :)</span>
+                <span><b>Digite no app</b>, o código abaixo e boa diversão :)</span>
                 <Numbers>
                     <div>{this.props.numbers[0]}</div>
                     <div>{this.props.numbers[1]}</div>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { COLORS } from '../../styles';
 
 export const BackBtn = styled.div`
@@ -21,7 +21,12 @@ export const BackBtn = styled.div`
         font-size: 4vh;
     }
 
-    :hover, :active, :focus, &.active {
+    :hover {
         background-image: linear-gradient(to bottom, ${COLORS.textLinkDefault}, ${COLORS.brand});
     }
+
+    ${props => props.selected && css`
+        background-image: linear-gradient(to bottom, ${COLORS.textLinkDefault}, ${COLORS.brand});
+    `}
+
 `;

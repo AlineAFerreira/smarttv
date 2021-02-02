@@ -16,10 +16,8 @@ export const Content = styled.div`
   display: flex;  
   background: ${COLORS.bgBox};
   color: #FFF;
-  height: 80vh;
   padding: 5vw 10vw;
 `;
-
 
 export const BoxLeft = styled.div`
   padding-right: 15vw;
@@ -28,15 +26,20 @@ export const BoxLeft = styled.div`
 `;
 
 export const BoxRight = styled.div`
-  flex: 0 0 20vw;
+  min-width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const BoxImg = styled.div`
-  height: 50%;
+  width: 100%;
+  min-height: 28vh;
   background: ${props => `url(${props.source}) no-repeat`};
-  background-size: cover;
+  background-size: auto 100%;
+  background-position: center;
 
-  :last-child {
+  :not(:first-child) {
     margin-top: 1vw;
   }
 `;
@@ -52,8 +55,11 @@ export const Description = styled.div`
   letter-spacing: 0.8px;
 `;
 
+export const BoxButton = styled.div`
+  margin-top: auto; 
+`;
+
 export const Button = styled.button`
-margin-top: auto; 
   width: 4.2vw;
   height: 4.2vw;
   background: ${COLORS.bgBar};
@@ -64,9 +70,10 @@ margin-top: auto;
   font-weight: bold;
   line-height: 1.43;
   letter-spacing: 0.4px;
+  margin-top: 2vw;
 
-  & + button {
-    margin-left: 1vw;
+  :first-child {
+    margin-right: 1vw;
   }
 
   span {

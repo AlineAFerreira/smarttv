@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { COLORS } from "../../styles";
+
+const { textPrimary } = COLORS;
 
 const CardEpSizes = {
     heightRelatedSizes: {
@@ -22,7 +25,7 @@ const Image = styled.div`
 `;
 
 const Infos = styled.div`
-    color: #FFF;
+    color: ${textPrimary};
     margin-top: 3vh;
     opacity: ${props => props.isCurrent ? '1' : '.5'};
     transition: all .1s;

@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import { COLORS } from "../../styles";
 import { CardEpSizes } from '../CardEpisode/styles'
 
 const marginBetweenCardsHeightRelated = 2;
+
+const { textPrimary, overlayLightest, textLinkDefault, brand } = COLORS;
 
 const Container = styled.div`
     width: 90vw;
@@ -9,7 +12,7 @@ const Container = styled.div`
     position: relative;
     & h1 {
         font-size: 3vh;
-        color: #FFF
+        color: ${textPrimary}
 }`;
 
 const Buttons = styled.div`
@@ -35,15 +38,15 @@ const Cursor = styled.div`
     height: ${CardEpSizes.heightRelatedSizes.imageHeight + 1.6}vh;
     border-radius: 1vh;
     margin: -.8vh;
-    border: .25vw solid #FFF;
+    border: .25vw solid ${overlayLightest};
     font-family: 'SKY-Icon-Font' !important;
     ::before {
         width: 9vh;
         height: 9vh;
         transition: all .05s;
         opacity: ${props => props.showPlay ? '1' : '0'};
-        background-image: linear-gradient(#ff5454, #d81818);
-        color: #FFF;
+        background-image: linear-gradient(${textLinkDefault}, ${brand});
+        color: ${textPrimary};
         text-align: center;
         line-height: 8.8vh;
         font-size: 4vh;

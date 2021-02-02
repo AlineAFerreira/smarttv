@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { COLORS } from "../../styles";
 
 const cardMarginHeightRelatedOnCarousel = 3;
 const timeAnimationInSeconds = .1;
@@ -6,7 +7,7 @@ const carouselHeightHeightRelated = 35;
 const carouselMarginTopHeightRelated = 2;
 
 const Container = styled.div`
-    color: #FFF;
+    color: ${COLORS.textPrimary};
     margin: 0 0 ${carouselMarginTopHeightRelated}vh ${cardMarginHeightRelatedOnCarousel}vh;
     height: ${carouselHeightHeightRelated}vh;
     position:relative;
