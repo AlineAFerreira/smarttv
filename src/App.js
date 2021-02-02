@@ -17,7 +17,7 @@ export default function App() {
   return (
     <>
       <GlobalStyle />
-      <Router>
+      <Router history={hashHistory}>
         <Switch>
           <Route path="/home">
             <Home />
