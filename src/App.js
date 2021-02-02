@@ -8,7 +8,8 @@ import SerieDetails from "./pages/serieDetails";
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  hashHistory
 } from "react-router-dom";
 import GlobalStyle from './styles';
 import './assets/styles/icon-font.css';
