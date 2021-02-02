@@ -6,10 +6,9 @@ import Movies from './pages/movies';
 import MovieDetails from './pages/movieDetails';
 import SerieDetails from "./pages/serieDetails";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
-  Route,
-  hashHistory
+  Route
 } from "react-router-dom";
 import GlobalStyle from './styles';
 import './assets/styles/icon-font.css';
@@ -18,7 +17,7 @@ export default function App() {
   return (
     <>
       <GlobalStyle />
-      <Router history={hashHistory}>
+      <Router>
         <Switch>
           <Route path="/home">
             <Home />
